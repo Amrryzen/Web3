@@ -3,6 +3,27 @@
         <title>CETRAK CETREK LAMPU</title>
     </head>
     <body>
+        <img src="Assets/Images/off.gif" alt="" id="off"/>
         <h1>CETREKAN LAMPU ON OFF</h1>
+        <button onclick="saklar('on')">ON</button>
+        <button onclick="saklar('off')">OFF</button>
+        
+        <!-- SCRIPT JS -->
+        <script>
+            function saklar(params){
+                console.log(params);
+
+                let off = document.getElementById("off");
+
+                if(params == "on"){
+                    off.src = "Assets/Images/on.gif";
+                }
+                if(params == "off"){
+                    off.src = "Assets/Images/off.gif";
+                }
+
+                return off;
+            }
+        </script>
     </body>
 </html>
