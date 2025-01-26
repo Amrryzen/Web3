@@ -1,29 +1,53 @@
-<html>
-    <head>
-        <title>CETRAK CETREK LAMPU</title>
-    </head>
-    <body>
-        <img src="Assets/Images/off.gif" alt="" id="off"/>
-        <h1>CETREKAN LAMPU ON OFF</h1>
-        <button onclick="saklar('on')">ON</button>
-        <button onclick="saklar('off')">OFF</button>
-        
-        <!-- SCRIPT JS -->
-        <script>
-            function saklar(params){
-                console.log(params);
+<!doctype html>
+<html lang="en">
 
-                let off = document.getElementById("off");
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.1/dist/flowbite.min.css" />
+    <title>CETRAK CETREK LAMPU</title>
+</head>
 
-                if(params == "on"){
-                    off.src = "Assets/Images/on.gif";
-                }
-                if(params == "off"){
-                    off.src = "Assets/Images/off.gif";
-                }
+<body>
+    <div class="flex justify-center items-center min-h-screen w-full bg-black gap-5">
+        <!-- LAMPU 1 -->
+        <div class="flex flex-col gap-3 justify-center items-center">
+            <img src="Assets/Images/off.gif" alt="" id="Lampu1" />
 
-                return off;
-            }
-        </script>
-    </body>
+            <label for="default-toggle1" class="inline-flex relative items-center cursor-pointer">
+                <input type="checkbox" id="default-toggle1" class="sr-only peer" onchange="saklar()">
+                <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-green-300 dark:peer-focus:ring-green-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-green-600 dark:peer-checked:bg-green-600">
+                </div>
+            </label>
+        </div>
+        <!-- LAMPU 2 -->
+        <div class="flex flex-col gap-3 justify-center items-center">
+            <img src="Assets/Images/off.gif" alt="" id="Lampu2" />
+            <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="default-toggle2" class="sr-only peer" onchange="saklar()">
+                <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-green-300 dark:peer-focus:ring-green-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-green-600 dark:peer-checked:bg-green-600">
+                </div>
+            </label>
+        </div>
+        <!-- LAMPU 3 -->
+        <div class="flex flex-col gap-3 items-center justify-center">
+            <img src="Assets/Images/off.gif" alt="" id="Lampu3" />
+            <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="default-toggle3" class="sr-only peer" onchange="saklar()">
+                <div
+                    class="relative w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-green-300 dark:peer-focus:ring-green-800 dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-green-600 dark:peer-checked:bg-green-600">
+                </div>
+            </label>
+        </div>
+
+    </div>
+    <!-- SCRIPT JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.0.0/dist/flowbite.min.js"></script>
+    <script src="saklar.js" type="application/javascript"></script>
+
+</body>
+
 </html>
